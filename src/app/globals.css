@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    color: rgba(255, 255, 255, 95%);
+}
+
+.audio-bar {
+    @apply rounded-full w-1 bg-white/95 min-h-1;
+}
