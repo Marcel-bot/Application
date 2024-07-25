@@ -1,8 +1,18 @@
 'use client';
 
-import { createContext, ReactNode, useContext } from 'react';
+import {
+	createContext,
+	Dispatch,
+	ReactNode,
+	SetStateAction,
+	useContext,
+	useState
+} from 'react';
 
-interface ChatProviderInterface {}
+interface ChatProviderInterface {
+	messages: message[];
+	setMessages: Dispatch<SetStateAction<message[]>>;
+}
 
 const ChatContext = createContext<ChatProviderInterface | undefined>(undefined);
 
@@ -10,6 +20,24 @@ export function useChatContext() {
 	return useContext(ChatContext)!;
 }
 
+interface message {
+	sender: boolean;
+	content: string;
+}
+
 export function ChatProvider({ children }: { children: ReactNode }) {
-	return <ChatContext.Provider value={{}}>{children}</ChatContext.Provider>;
+	const [messages, setMessages] = useState<message[]>([]);
+
+	function sendMessage(msg: string) {}
+
+	return (
+		<ChatContext.Provider
+			value={{
+				messages,
+				setMessages
+			}}
+		>
+			{children}
+		</ChatContext.Provider>
+	);
 }
