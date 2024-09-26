@@ -1,3 +1,3 @@
-export default function Eyes() {
-	return <></>;
+export default function Page() {
+  return <></>;
 }
