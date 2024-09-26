@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${plusJakartaSans.className} flex w-screen h-screen bg-background dark`}
+        className={`${plusJakartaSans.className} flex h-screen w-screen bg-background dark`}
       >
         <Navbar />
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   );
