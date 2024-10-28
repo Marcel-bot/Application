@@ -5,3 +5,9 @@
 * {
     @apply text-white;
 }
+
+.w-color-swatch {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}

@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import '@/lib/fontawesome/css/fa.css';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import Navbar from '@/components/skeleton/navbar';
+import ProviderWrapper from '@/lib/providers/provider-wrapper';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin']
@@ -11,7 +12,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: 'Marcel',
-  description: 'Marcel app'
+  description: 'The app that controls the Marcel humanoid robot'
 };
 
 export default function RootLayout({
@@ -25,7 +26,7 @@ export default function RootLayout({
         className={`${plusJakartaSans.className} flex h-screen w-screen bg-background dark`}
       >
         <Navbar />
-        {children}
+        <ProviderWrapper>{children}</ProviderWrapper>
       </body>
     </html>
   );

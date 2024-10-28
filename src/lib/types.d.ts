@@ -19,3 +19,21 @@ export interface AgentMessage {
 }
 
 export type Message = UserMessage | AgentMessage;
+
+export interface Point {
+  x: number;
+  y: number;
+}
+
+export interface Bezier {
+  start: Point;
+  control1: Point;
+  control2: Point;
+  end: Point;
+}
+
+export interface Emotion {
+  name: string;
+  leftEye: Bezier[];
+  rightEye: Bezier[];
+}
