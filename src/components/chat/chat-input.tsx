@@ -8,7 +8,7 @@ export default function () {
   const [value, setValue] = useState<string>('');
 
   return (
-    <div className='flex w-[48rem] rounded-3xl bg-[#282828] p-2'>
+    <div className='flex w-full max-w-[48rem] rounded-3xl bg-[#282828] p-2'>
       <FileAttachButton />
       <Textarea
         value={value}
