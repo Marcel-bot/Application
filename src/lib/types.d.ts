@@ -1,5 +1,6 @@
 import { actionIcons } from '@/lib/data/action-icons';
 import { ReactNode } from 'react';
+import { BodyParts } from '@/lib/enum';
 
 export interface Action {
   type: keyof actionIcons;
@@ -36,4 +37,12 @@ export interface Emotion {
   name: string;
   leftEye: Bezier[];
   rightEye: Bezier[];
+}
+
+export interface BodyPartModel {
+  x: string;
+  y: string;
+  d: string;
+  part: BodyParts;
+  stroke?: string;
 }

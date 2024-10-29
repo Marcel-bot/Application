@@ -1,8 +1,11 @@
+'use client';
+
 import Eye from '@/components/eyes/eye';
 import EyeJoystick from '@/components/eyes/eye-joystick';
 import EmotionMenu from '@/components/eyes/emotion-menu';
 import { eyePlaceholder } from '@/lib/data/eye-placeholder';
 import ColorPicker from '@/components/eyes/color-picker';
+import { Button } from '@nextui-org/button';
 
 export default function Page() {
   return (
@@ -18,11 +21,20 @@ export default function Page() {
         />
       </section>
       <section className='flex w-full grow items-center justify-between px-12'>
-        <EyeJoystick className='h-[16rem] w-[16rem]' />
+        <div className='flex h-full items-center gap-12 py-12'>
+          <EyeJoystick className='h-[16rem] w-[16rem]' />
+          <div className='flex h-full flex-col gap-2'>
+            <Button>Blink</Button>
+            <Button>On</Button>
+          </div>
+        </div>
         <div className='flex h-full gap-4 py-12'>
           <div className='flex flex-col gap-2'>
             <ColorPicker>Background</ColorPicker>
             <ColorPicker>Eye color</ColorPicker>
+            <Button startContent={<i className='fa fa-paperclip' />}>
+              Display image
+            </Button>
           </div>
           <EmotionMenu />
         </div>
