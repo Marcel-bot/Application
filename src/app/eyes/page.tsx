@@ -24,15 +24,18 @@ export default function Page() {
         <div className='flex h-full items-center gap-12 py-12'>
           <EyeJoystick className='h-[16rem] w-[16rem]' />
           <div className='flex h-full flex-col gap-2'>
-            <Button>Blink</Button>
-            <Button>On</Button>
+            <Button className='bg-[#282828]'>Blink</Button>
+            <Button className='bg-[#282828]'>On</Button>
           </div>
         </div>
         <div className='flex h-full gap-4 py-12'>
           <div className='flex flex-col gap-2'>
             <ColorPicker>Background</ColorPicker>
             <ColorPicker>Eye color</ColorPicker>
-            <Button startContent={<i className='fa fa-paperclip' />}>
+            <Button
+              className='bg-[#282828]'
+              startContent={<i className='fa fa-paperclip' />}
+            >
               Display image
             </Button>
           </div>

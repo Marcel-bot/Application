@@ -46,3 +46,16 @@ export interface BodyPartModel {
   part: BodyParts;
   stroke?: string;
 }
+
+export interface MotionModel {
+  part: BodyParts;
+  value: number;
+}
+
+export type TimingFunction = 'linear' | 'ease-in' | 'ease-out' | 'ease-in-out';
+
+export interface MotionGroupModel {
+  motions: MotionModel[];
+  duration: number;
+  timing: TimingFunction;
+}

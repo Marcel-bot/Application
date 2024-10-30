@@ -18,7 +18,7 @@ export default function () {
       ))}
       <Popover>
         <PopoverTrigger>
-          <Button>More...</Button>
+          <Button className='bg-[#282828]'>More...</Button>
         </PopoverTrigger>
         <PopoverContent className='grid grid-cols-4 gap-2'>
           {uncommonEmotions.map((emotion, index) => (
@@ -29,7 +29,7 @@ export default function () {
       </Popover>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
         <ModalContent>
-          {(onClose) => (
+          {() => (
             <ModalBody>
               <NewEmotionMenu />
             </ModalBody>
