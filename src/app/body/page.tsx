@@ -68,7 +68,7 @@ export default function Page() {
           </Select>
           <Counter />
         </div>
-        <Slider />
+        <Slider size='lg' />
         <Button className='bg-[#282828]'>Emergency stop</Button>
       </div>
     </main>
